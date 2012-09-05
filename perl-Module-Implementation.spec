@@ -19,6 +19,7 @@ BuildRequires:	perl(Test::Requires)
 BuildRequires:	perl(Try::Tiny)
 BuildRequires:	perl(strict)
 BuildRequires:	perl(warnings)
+BuildRequires:	perl-devel
 BuildArch:	noarch
 
 %description
