@@ -1,9 +1,9 @@
-%define upstream_name    Module-Implementation
+%define upstream_name Module-Implementation
 %define upstream_version 0.06
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 
 Summary:	Loads one of several alternate underlying implementations for a module
 License:	GPL+ or Artistic
