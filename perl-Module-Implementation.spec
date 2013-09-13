@@ -1,16 +1,15 @@
-%define upstream_name Module-Implementation
-%define upstream_version 0.06
-
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+%define modname	Module-Implementation
+%define modver	0.06
 
 Summary:	Loads one of several alternate underlying implementations for a module
-License:	GPL+ or Artistic
+Name:		perl-%{modname}
+Version:	%perl_convert_version %{modver}
+Release:	3
+License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.gz
-
+Url:		http://search.cpan.org/dist/%{modname}
+Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
+BuildArch:	noarch
 BuildRequires:	perl(Carp)
 BuildRequires:	perl(Module::Runtime)
 BuildRequires:	perl(Test::Fatal)
@@ -20,7 +19,6 @@ BuildRequires:	perl(Try::Tiny)
 BuildRequires:	perl(strict)
 BuildRequires:	perl(warnings)
 BuildRequires:	perl-devel
-BuildArch:	noarch
 
 %description
 This module abstracts out the process of choosing one of several underlying
@@ -34,7 +32,7 @@ time. If you want to load arbitrary implementations then you probably want
 something like a plugin system, not this module.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -qn %{modname}-%{modver}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -48,7 +46,6 @@ something like a plugin system, not this module.
 
 %files
 %doc README LICENSE META.yml Changes META.json INSTALL
-%{_mandir}/man3/*
 %{perl_vendorlib}/*
-
+%{_mandir}/man3/*
 
