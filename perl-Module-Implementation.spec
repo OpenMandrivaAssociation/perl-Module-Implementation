@@ -45,6 +45,6 @@ something like a plugin system, not this module.
 %makeinstall_std
 
 %files
-%doc README LICENSE META.yml Changes META.json INSTALL
+%doc  LICENSE META.yml Changes META.json INSTALL
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
