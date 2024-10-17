@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{modver}
 Release:	15
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
-Url:		http://metacpan.org/pod/Module::Implementation
+Url:		https://metacpan.org/pod/Module::Implementation
 Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Carp)
