@@ -4,7 +4,7 @@
 Summary:	Loads one of several alternate underlying implementations for a module
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	15
+Release:	16
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Module::Implementation
