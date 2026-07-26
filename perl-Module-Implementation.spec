@@ -1,14 +1,12 @@
 %define modname	Module-Implementation
-%define modver 0.09
-
 Summary:	Loads one of several alternate underlying implementations for a module
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	16
+Version:	0.09
+Release:	17
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Module::Implementation
-Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Module/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Carp)
@@ -33,7 +31,7 @@ time. If you want to load arbitrary implementations then you probably want
 something like a plugin system, not this module.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
